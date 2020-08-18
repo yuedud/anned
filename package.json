@@ -45,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn commitmsg"
+      "pre-commit": "npm run -s commitmsg"
     }
   }
 }
