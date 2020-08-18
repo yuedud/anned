@@ -1,6 +1,6 @@
-import ReactDom from 'react-dom';
 import React from 'react';
-import Index from './index';
+import ReactDom from 'react-dom';
+import Index from './test';
 
 ReactDom.render(
     <Index />,
