@@ -13,11 +13,21 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                enforce: 'pre',
                 exclude: /node_modules/,
                 use: [
                     'babel-loader'
                 ],
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 99999,
+                        encoding: false,
+                    }
+                }],
             },
             {
                 test: /\.global\.less$/,
