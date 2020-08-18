@@ -6,10 +6,11 @@ import style from './index.less';
 class Index extends Component {
 
     render() {
-        const {content, type, background = false} = this.props;
+        const {content, type, background = false, styles} = this.props;
         return (
             <>
                <span
+                   style={styles}
                    className={
                         clazz([
                             style.tag,
@@ -50,5 +51,6 @@ Index.propTypes = {
         ['magenta', 'red', 'volcano', 'orange', 'gold', 'lime', 'green', 'blue', 'cyan', 'geekblue', 'purple']
     ),
     background: PropTypes.bool,
+    styles: PropTypes.object,
 }
 export default Index;

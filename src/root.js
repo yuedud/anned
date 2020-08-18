@@ -6,9 +6,9 @@ import Tag from './tag';
 ReactDom.render(
     <>
         <Tag content={'tag'} type={"magenta"} background={true} />
-        <Tag content={'tag'} type={"red"} background={true} />
+        <Tag content={'tag'} type={"red"} background={false} />
         <Tag content={'tag'} type={"purple"} background={true} />
-        <Tag content={'tag'} type={"blue"} background={true} />
+        <Tag content={'tag'} type={"blue"} />
         <Tag content={'tag'} type={"geekblue"} background={true} />
         <Tag content={'tag'} type={"cyan"} background={true} />
     </>,
