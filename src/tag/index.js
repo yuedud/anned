@@ -6,24 +6,35 @@ import style from './index.less';
 class Index extends Component {
 
     render() {
-        const {content, type} = this.props;
+        const {content, type, background = false} = this.props;
         return (
             <>
                <span
                    className={
                         clazz([
                             style.tag,
-                            type === "magenta" && style.magenta,
-                            type === "red" && style.red,
-                            type === "volcano" && style.volcano,
-                            type === "orange" && style.orange,
-                            type === "gold" && style.gold,
-                            type === "lime" && style.lime,
-                            type === "green" && style.green,
-                            type === "blue" && style.blue,
-                            type === "cyan" && style.cyan,
-                            type === "geekblue" && style.geekblue,
-                            type === "purple" && style.purple,
+                            type === "magenta"&& background === false && style.magenta,
+                            type === "magenta" && background === true && style.magentaBg,
+                            type === "red" && background === false && style.red,
+                            type === "red" && background === true && style.redBg,
+                            type === "volcano" && background === false && style.volcano,
+                            type === "volcano" && background === true && style.volcanoBg,
+                            type === "orange" && background === false && style.orange,
+                            type === "orange" && background === true && style.orangeBg,
+                            type === "gold" && background === false && style.gold,
+                            type === "gold" && background === true && style.goldBg,
+                            type === "lime" && background === false && style.lime,
+                            type === "lime" && background === true && style.limeBg,
+                            type === "green" && background === false && style.green,
+                            type === "green" && background === true && style.greenBg,
+                            type === "blue" && background === false && style.blue,
+                            type === "blue" && background === true && style.blueBg,
+                            type === "cyan" && background === false && style.cyan,
+                            type === "cyan" && background === true && style.cyanBg,
+                            type === "geekblue" && background === false && style.geekblue,
+                            type === "geekblue" && background === true && style.geekblueBg,
+                            type === "purple" && background === false && style.purple,
+                            type === "purple" && background === true && style.purpleBg,
                         ])
                     }
                >
@@ -38,5 +49,6 @@ Index.propTypes = {
     type: PropTypes.oneOf(
         ['magenta', 'red', 'volcano', 'orange', 'gold', 'lime', 'green', 'blue', 'cyan', 'geekblue', 'purple']
     ),
+    background: PropTypes.bool,
 }
 export default Index;
