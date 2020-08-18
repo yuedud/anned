@@ -1,7 +1,7 @@
-@base: #8ed6fb;
-
-
-
+._30HcDicvJA9GuDgFYR_p1l {
+  color: red;
+  background: #8ed6fb;
+}
 html,
 body,
 h1,
@@ -37,11 +37,9 @@ td {
   padding: 0;
   border: 0;
 }
-
 * {
   box-sizing: border-box;
 }
-
 h1,
 h2,
 h3,
@@ -50,62 +48,49 @@ h5,
 h6 {
   font-weight: 400;
 }
-
 html {
   min-width: 320px;
 }
-
 body {
   /*!* 禁止选择文本 *!*/
   -webkit-user-select: none;
   /*!* 禁止IOS系统上点击触发反馈 *!*/
-
   -webkit-tap-highlight-color: rgba(51, 133, 255, 0);
   /*!* 避免屏幕旋转导致字体大小缩放 *!*/
   -webkit-text-size-adjust: 100%;
   /*!*font-family: "Helvetica", "STHeiTi", "sans-serif", "Droid Sans", "Droid Sans Fallback", "Helvetica Neue";*!*/
-  //background: #f3f6f5;
   /*!* 禁止设备弹出列表按钮 *!*/
   -webkit-touch-callout: none;
 }
-
 /* ===typography=== */
-
 a {
   text-decoration: none;
   outline: 0;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
   content: none;
 }
-
 ins {
   text-decoration: none;
 }
-
 del {
   text-decoration: line-through;
 }
-
 fieldset,
 img {
   border: none;
 }
-
 /* ===form=== */
 button,
 input,
@@ -116,78 +101,64 @@ textarea {
   vertical-align: middle;
   -webkit-user-select: auto;
 }
-
 textarea {
   overflow: auto;
   vertical-align: top;
   resize: none;
 }
-
 [hidden] {
   display: none;
 }
-
 /* ===table=== */
 table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-
 /* ios下的safari，会出现莫名其妙的阴影，圆角，所以要重置下 */
 input,
 textarea {
   border-radius: 0;
-
   -webkit-appearance: none;
 }
-
 a,
 button,
 input {
   /*-webkit-tap-highlight-color: rgba(255, 0, 0, 0);*/
   -webkit-user-select: auto;
 }
-
 button {
   border: 0;
   outline: 0;
   background-color: transparent;
 }
-
 /*
 1.去除android a/button/input标签被点击时产生的边框
 2.去除ios a标签被点击时产生的半透明灰色背景
 */
-
 /* let's clear some floats */
-.clearfix:before,
-.clearfix:after {
+.F3XTfJnuIrq8yByPrWvtO:before,
+.F3XTfJnuIrq8yByPrWvtO:after {
   content: "\0020";
   display: block;
   overflow: hidden;
   height: 0;
 }
-
-.clearfix:after {
+.F3XTfJnuIrq8yByPrWvtO:after {
   clear: both;
 }
-
-.clearfix {
+.F3XTfJnuIrq8yByPrWvtO {
   zoom: 1;
 }
-
-.b-border:before {
+._2ejNayQ72d29xoNz6ZhOZw:before {
   content: " ";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 1px;
-  -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
 }
-
-.a-border:after {
+._3u-G_add9X5JnpT07vtarZ:after {
   content: " ";
   position: absolute;
   top: auto;
@@ -197,27 +168,22 @@ button {
   display: block;
   width: 100%;
   height: 1px;
-  -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
-
-.pixel-ratio-2 .a-border:after {
+._2uWDSTbuN_YkMNX6kfY32z ._3u-G_add9X5JnpT07vtarZ:after {
   width: 200%;
-  transform: scale(.5);
+  transform: scale(0.5);
 }
-
-.pixel-ratio-3 .a-border:after {
+._1S5E3yBjyTceERBU1zrfF6 ._3u-G_add9X5JnpT07vtarZ:after {
   width: 300%;
-  transform: scale(.3333333333333333333333);
+  transform: scale(0.33333333);
 }
-
-.border-radius {
+.wA3mB0CJh-IR9hyQK0m_Z {
   display: inline-block;
   overflow: hidden;
   border-radius: 50%;
 }
-
-.border-radius:after {
+.wA3mB0CJh-IR9hyQK0m_Z:after {
   content: " ";
   position: absolute;
   top: 0;
@@ -229,15 +195,14 @@ button {
   border-radius: 50%;
   transform-origin: left top;
 }
-
-.pixel-ratio-2 .border-radius:after {
+._2uWDSTbuN_YkMNX6kfY32z .wA3mB0CJh-IR9hyQK0m_Z:after {
   width: 200%;
   height: 200%;
-  transform: scale(.5);
+  transform: scale(0.5);
 }
-
-.pixel-ratio-3 .border-radius:after {
+._1S5E3yBjyTceERBU1zrfF6 .wA3mB0CJh-IR9hyQK0m_Z:after {
   width: 300%;
   height: 300%;
-  transform: scale(.3333333333333333333333);
+  transform: scale(0.33333333);
 }
+

@@ -1,11 +1,12 @@
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/root.js',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: "index.js"
+        filename: "lib/lib-[hash:5].js",
     },
     mode: 'production',
     module: {
@@ -21,7 +22,13 @@ module.exports = {
             {
                 test: /\.global\.less$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/src',
+                            hmr: true,
+                        }
+                    },
                     'css-loader',
                     'postcss-loader',
                     'less-loader',
@@ -30,7 +37,12 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: true,
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {
@@ -54,6 +66,9 @@ module.exports = {
         new HTMLPlugin({
             template: "./public/index.html"
         }),
+        new MiniCssExtractPlugin({
+            filename: 'css/lib-[hash:5].css',
+        })
     ],
     devServer: {
         port: 3456,
