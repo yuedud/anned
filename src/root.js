@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Tag from './tag';
+import {toast} from './toast';
 
+toast("您输入的信息有误！",'top');
 //自己测试调样式的时候用
 ReactDom.render(
     <>

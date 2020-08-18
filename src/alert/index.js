@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import reactDom from "react-dom";
 import PropTypes from 'prop-types';
 import style from './index.less';
 import {clazz} from "../utils/clazz";
@@ -51,3 +52,12 @@ Index.propTypes = {
     timer: PropTypes.number
 }
 export default Index;
+
+export let alert = (title, type, timer = 3000) =>{
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    reactDom.render(<Index title={title} type={type} timer={timer}/>,div)
+    setTimeout(
+        ()=> document.body.removeChild(div),timer
+    )
+}
