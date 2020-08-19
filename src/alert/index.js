@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import reactDom from "react-dom";
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import style from './index.less';
 import {clazz} from "../utils/clazz";
 

@@ -1,12 +1,18 @@
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const path = require('path');
 module.exports = {
     entry: './src/root.js',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: "lib/lib-[hash:5].js",
+    },
+    resolve: {
+        mainFiles: ['index.js', 'index.jsx'],
+        alias: {
+            '@': path.resolve(__dirname,'src')
+        }
     },
     mode: 'production',
     module: {
