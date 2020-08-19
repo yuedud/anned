@@ -5,6 +5,7 @@ import style from './index.less';
 import {clazz} from "../utils/clazz";
 
 class Index extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
