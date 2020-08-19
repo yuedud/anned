@@ -49,6 +49,9 @@
     }
   },
   "lint-staged": {
-    "/src/**/*.js": ["eslint --fix"]
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
