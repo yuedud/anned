@@ -1,7 +1,6 @@
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
 module.exports = {
     entry: './src/root.js',
     output: {
