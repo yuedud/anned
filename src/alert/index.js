@@ -10,11 +10,11 @@ class Index extends Component {
         super(props);
         this.state = {
             showAlert: true,
-            all: "123",
         }
     }
 
     componentDidMount() {
+        let a = 1;
         const {timer = 3000} = this.props;
         setTimeout(()=>this.setState({showAlert: false}), timer);
     }
