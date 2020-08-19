@@ -14,13 +14,12 @@ class Index extends Component {
     }
 
     componentDidMount() {
-        let a = 1;
         const {timer = 3000} = this.props;
         setTimeout(()=>this.setState({showAlert: false}), timer);
     }
 
     renderAlertModal = () => {
-        const {type='normal', title} = this.props;
+        const {type = 'normal', title} = this.props;
         return (
             <div
                 className={
