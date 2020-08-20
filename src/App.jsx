@@ -27,7 +27,8 @@ class App extends Component {
     }
     render() {
         let {isShowModal} = this.state;
-        console.log(isShowModal)
+        if (1 === 1)
+            isShowModal = 1
         return (
             <div>
                 <Tag content={'tag'} type={"magenta"} background={true} />
