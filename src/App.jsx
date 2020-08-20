@@ -4,7 +4,6 @@
  */
 import React, {Component} from 'react';
 import Tag from './tag';
-import Drawer from './drawer';
 import {toast} from "@/toast";
 
 
@@ -17,18 +16,15 @@ class App extends Component {
         super(props);
         this.state = {
             isShowModal: false
-        }
+        };
     }
 
     handleShowModal() {
         this.setState({
             isShowModal: !this.state.isShowModal
-        })
+        });
     }
     render() {
-        let {isShowModal} = this.state;
-        if (1 === 1)
-            isShowModal = 1
         return (
             <div>
                 <Tag content={'tag'} type={"magenta"} background={true} />
