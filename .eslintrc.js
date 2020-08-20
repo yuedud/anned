@@ -8,12 +8,12 @@ module.exports = {
     },
     rules: { // 0或者off表示规则关闭，出错也被忽略；1或者warn表示如果出错会给出警告(不会导致程序退出)；2或者error表示如果出错会报出错误(会导致程序退出，退出码是1)
         "indent": [2,4],
-        "eqeqeq": [2,'always'],
-        "no-const-assign": [2,'always'],
-        'no-dupe-keys': [2,'always'],
-        'no-dupe-args': [2,'always'],
-        'no-multi-spaces': [2,'always'],
-        "no-mixed-spaces-and-tabs": [2, false],
+        "eqeqeq": 2,
+        "no-const-assign": 2,
+        'no-dupe-keys': 2,
+        'no-dupe-args': 2,
+        'no-multi-spaces': 2,
+        "no-mixed-spaces-and-tabs": 2,
         'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
     },
     env: {
