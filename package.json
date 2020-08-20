@@ -47,6 +47,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "lint-staged": {
-    "src/**/.js?(x)": "eslint --fix"
+    "*.js?(x)": "eslint --fix"
   }
 }
