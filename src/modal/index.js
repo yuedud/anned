@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import style from './index.less';
-import reactDom from 'react-dom';
 import onClickOutside from 'react-onclickoutside';
 class Index extends Component {
     handleClickOutside = (e) => {

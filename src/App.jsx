@@ -4,7 +4,7 @@
  */
 import React, {Component} from 'react';
 import Tag from './tag';
-import Loading from './loading';
+import Drawer from './drawer';
 
 
 // toast("您输入的信息有误！",'top');
@@ -32,9 +32,9 @@ class App extends Component {
                 <Tag content={'tag'} type={"geekblue"} background={true} />
                 <Tag content={'tag'} type={"cyan"} background={true} />
                 <button onClick={e => this.handleShowModal(e)}>触发loading</button>
-                <Loading description={'召唤鹰翔中...'} type={'curve'} onLoading={isShowModal}>
-                    <div style={{width:'300px',height:'500px',background:'red'}}>1234</div>
-                </Loading>
+                <Drawer placement={'right'}>
+                    <div>你这写的有点问题啊</div>
+                </Drawer>
             </div>
         );
     }

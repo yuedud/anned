@@ -1,0 +1,77 @@
+.mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.alertBgt{
+  padding: 5px 10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  z-index: 9999;
+}
+.alertBgb{
+  padding: 5px 10px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  z-index: 9999;
+}
+.alertBgl{
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  z-index: 9999;
+}
+.alertBgr{
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  z-index: 9999;
+}
+.normal{
+  background: #5091ff;
+}
+.warn{
+  background: #f7d899;
+}
+.error{
+  background: #ef5504;
+}
+.success{
+  background: #87d168;
+}
+@keyframes alert {
+  0%{
+    opacity: 0;
+    top: -100px;
+  }
+  10%,90%{
+    opacity: 1;
+    top: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
