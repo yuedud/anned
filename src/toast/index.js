@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import reactDom from "react-dom";
 import style from './index.less';
-import {clazz} from "../utils/clazz";
+import {clazz} from "@/utils/clazz";
 
 class Index extends Component {
     render() {
@@ -26,5 +26,5 @@ export let toast = (content, position = 'center', timer = 2000) => {
     reactDom.render(<Index content={content} position={position} />, div);
     setTimeout(
         ()=> document.body.removeChild(div),timer
-    )
+    );
 }

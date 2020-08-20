@@ -5,9 +5,13 @@
 import React, {Component} from 'react';
 import Tag from './tag';
 import Drawer from './drawer';
+import {toast} from "@/toast";
 
 
-// toast("您输入的信息有误！",'top');
+toast("1！",'top');
+toast("2！",'top');
+toast("3！",'top');
+toast("4！",'top');
 class App extends Component {
     constructor(props) {
         super(props);
@@ -29,9 +33,6 @@ class App extends Component {
                 <Tag content={'tag'} type={"red"} background={false} />
                 <Tag content={'tag'} type={"purple"} background={true} />
                 <button onClick={e => this.handleShowModal(e)}>触发loading</button>
-                <Drawer placement={'right'}>
-                    <div>你这写的有点问题啊</div>
-                </Drawer>
             </div>
         );
     }
