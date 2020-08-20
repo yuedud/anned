@@ -7,9 +7,6 @@ import Tag from './tag';
 import {toast} from "@/toast";
 
 
-toast("1！",'top');
-toast("2！",'top');
-toast("3！",'top');
 toast("4！",'top');
 class App extends Component {
     constructor(props) {
