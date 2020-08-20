@@ -4,8 +4,7 @@
  */
 import React, {Component} from 'react';
 import Tag from './tag';
-import {toast} from './toast';
-import Modal from './modal';
+import Loading from './loading';
 
 
 // toast("您输入的信息有误！",'top');
@@ -17,14 +16,9 @@ class App extends Component {
         }
     }
 
-    handleHideModel() {
-        this.setState({
-            isShowModal: false
-        })
-    }
     handleShowModal() {
         this.setState({
-            isShowModal: true
+            isShowModal: !this.state.isShowModal
         })
     }
     render() {
@@ -37,13 +31,10 @@ class App extends Component {
                 <Tag content={'tag'} type={"blue"} />
                 <Tag content={'tag'} type={"geekblue"} background={true} />
                 <Tag content={'tag'} type={"cyan"} background={true} />
-                <button onClick={e => this.handleShowModal(e)}>触发modal</button>
-                {
-                    isShowModal && <Modal
-                        message={'此操作将永久删除该文件, 是否继续?'}
-                        onCancel={e => this.handleHideModel(e)}
-                    />
-                }
+                <button onClick={e => this.handleShowModal(e)}>触发loading</button>
+                <Loading type={'round'} onLoading={isShowModal}>
+                    <div style={{width:'300px',height:'500px',background:'red'}}>1234</div>
+                </Loading>
             </div>
         );
     }
