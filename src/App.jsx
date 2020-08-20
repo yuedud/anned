@@ -32,7 +32,7 @@ class App extends Component {
                 <Tag content={'tag'} type={"geekblue"} background={true} />
                 <Tag content={'tag'} type={"cyan"} background={true} />
                 <button onClick={e => this.handleShowModal(e)}>触发loading</button>
-                <Loading type={'round'} onLoading={isShowModal}>
+                <Loading description={'召唤鹰翔中...'} type={'curve'} onLoading={isShowModal}>
                     <div style={{width:'300px',height:'500px',background:'red'}}>1234</div>
                 </Loading>
             </div>

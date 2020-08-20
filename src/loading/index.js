@@ -29,7 +29,7 @@ class Index extends Component {
 
 
     render() {
-        const {type = 'round', children, onLoading} = this.props;
+        const {type = 'round', children, onLoading, description} = this.props;
         return (
             <div>
                 {
@@ -40,6 +40,7 @@ class Index extends Component {
                                 <div className={styles.round}>
                                     {this.renderLoading(type)}
                                 </div>
+                                <div className={styles.title}>{description}</div>
                             </div>
                         </div>
                     :
@@ -57,7 +58,8 @@ class Index extends Component {
 
 Index.propTypes = {
     type: PropTypes.oneOf(['round','curve']),
-    onLoading: PropTypes.bool
+    onLoading: PropTypes.bool,
+    description: PropTypes.string
 }
 
 export default Index;
