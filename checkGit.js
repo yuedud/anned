@@ -9,8 +9,8 @@ git.diffSummary(['--cached']).then(
             deletions: 0,
             fileCounts: 0
         };
+        console.log(1234,diffSummary);
         diffSummary.files.forEach(item => {
-            console.log(1234,item);
             const isIgnore = ignoreFilterList.includes(item.file);
             if (!isIgnore){
                 changes.insertions += item.insertions;
