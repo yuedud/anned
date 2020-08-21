@@ -12,8 +12,8 @@ module.exports = {
         "react/jsx-uses-react": 2,
         "react/jsx-uses-vars": 2,
         "eqeqeq": 2, //使用===
-        "no-console": 2, //不能有console
-        "no-alert": 1, //不能有console
+        "no-console": 1, //不能有console
+        "no-alert": 1, //不能有alert
         "no-const-assign": 2,//const变量不能更改
         'no-dupe-args': 2,//参数不能重复
         'no-use-before-define': 2, //定义之前不能使用

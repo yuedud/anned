@@ -8,15 +8,16 @@ git.diffSummary(['--cached']).then(
             insertions: 0,
             deletions: 0,
             fileCounts: 0
-        }
+        };
         diffSummary.files.forEach(item => {
+            console.log(1234,item);
             const isIgnore = ignoreFilterList.includes(item.file);
             if (!isIgnore){
                 changes.insertions += item.insertions;
                 changes.deletions += item.deletions;
                 changes.fileCounts += 1;
             }
-        })
+        });
         const codeChange = changes.insertions + changes.deletions;
         if (codeChange > 400){
             const error = new Error(
@@ -31,4 +32,4 @@ git.diffSummary(['--cached']).then(
             process.exit(1);
         }
     }
-)
+);
