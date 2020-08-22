@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "postcss-preset-env": "^6.7.0",
     "react-onclickoutside": "^6.9.0"
   },
   "devDependencies": {
@@ -49,5 +50,12 @@
   },
   "lint-staged": {
     "*.(js|jsx)": "eslint --fix"
+  },
+  "browserslist": {
+    "production": [
+      "> 0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
   }
 }

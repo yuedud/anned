@@ -3,7 +3,7 @@ const git = simpleGit();
 
 git.diffSummary(['--cached']).then(
     diffSummary => {
-        const ignoreFilterList = ['package.lock.json'];
+        const ignoreFilterList = ['package.lock.json','dist'];
         const changes = {
             insertions: 0,
             deletions: 0,
