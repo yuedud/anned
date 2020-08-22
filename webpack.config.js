@@ -92,9 +92,10 @@ module.exports = {
         overlay: {
             errors: true,
             warnings: true
-        }
+        },
+        compress: true
     },
     performance: {
         hints: false
     }
-}
+};
