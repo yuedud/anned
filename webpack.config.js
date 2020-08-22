@@ -1,6 +1,7 @@
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OCAWP = require('optimize-css-assets-webpack-plugin');
 
 process.env.NODE_ENV = 'production';
 module.exports = {
@@ -85,7 +86,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'css/lib-[hash:5].css',
-        })
+        }),
+        new OCAWP()
     ],
     devServer: {
         port: 3456,

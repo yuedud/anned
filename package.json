@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-preset-env": "^6.7.0",
     "react-onclickoutside": "^6.9.0"
   },
