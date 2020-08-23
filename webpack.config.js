@@ -82,7 +82,8 @@ module.exports = {
     },
     plugins: [
         new HTMLPlugin({
-            template: "./public/index.html"
+            template: "./public/index.html",
+            minify: true
         }),
         new MiniCssExtractPlugin({
             filename: 'css/lib-[hash:5].css',
