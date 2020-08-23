@@ -15,7 +15,7 @@ class Index extends Component {
 
     componentDidMount() {
         const {timer = 3000} = this.props;
-        setTimeout(()=>this.setState({showAlert: false}), timer);
+        setTimeout(() => this.setState({showAlert: false}), timer);
     }
 
     renderAlertModal = () => {
@@ -25,10 +25,10 @@ class Index extends Component {
                 className={
                     clazz([
                         style.alertBg,
-                        type==='normal' && style.normal,
-                        type==='warn' && style.warn,
-                        type==='error' && style.error,
-                        type==='success' && style.success,
+                        type === 'normal' && style.normal,
+                        type === 'warn' && style.warn,
+                        type === 'error' && style.error,
+                        type === 'success' && style.success,
                     ])
                 }
             >
@@ -46,6 +46,7 @@ class Index extends Component {
         );
     }
 }
+
 Index.propTypes = {
     title: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['normal', 'warn', 'error', 'success']),
@@ -53,11 +54,11 @@ Index.propTypes = {
 };
 export default Index;
 
-export const alert = (title, type, timer = 3000) =>{
+export const alert = (title, type, timer = 3000) => {
     const div = document.createElement('div');
     document.body.appendChild(div);
-    reactDom.render(<Index title={title} type={type} timer={timer}/>,div);
+    reactDom.render(<Index title={title} type={type} timer={timer}/>, div);
     setTimeout(
-        ()=> document.body.removeChild(div),timer
+        () => document.body.removeChild(div), timer
     );
 };
