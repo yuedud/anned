@@ -30,6 +30,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 0,
     // 强制语义标签
     'jsx-a11y/no-static-element-interactions': 0,
+    'import/extensions': 0,
   //     "eqeqeq": 2, //使用===
   //     "no-console": 1, //不能有console
   //     "no-alert": 1, //不能有alert

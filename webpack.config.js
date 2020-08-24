@@ -10,7 +10,7 @@ module.exports = {
     filename: 'lib/lib-[hash:5].js',
   },
   resolve: {
-    mainFiles: ['index.jsx', 'index.jsx'],
+    mainFiles: ['index.jsx', 'index.js'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
