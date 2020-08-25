@@ -2,7 +2,7 @@
   "name": "react-ui-tools",
   "version": "1.0.0",
   "description": "",
-  "main": "src/root.jsx",
+  "main": "src/export.jsx",
   "scripts": {
     "build": "rm -r ./dist && webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
