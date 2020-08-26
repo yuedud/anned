@@ -3,7 +3,7 @@ const readline = require('readline');
 
 const git = simple();
 
-git.diffSummary(['--cached']).then(
+git.diffSummary().then(
   (diffSummary) => {
     const files = [];
     diffSummary.files.forEach(
