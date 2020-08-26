@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
     "pre-commit": "lint-staged && node ./checkGit.js",
-    "pre-push": "node ./checkDiffBeforPush.js"
+    "diff": "node ./checkDiffBeforPush.js"
   },
   "keywords": [],
   "author": "",
