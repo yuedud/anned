@@ -23,7 +23,7 @@ git.diffSummary().then(
       const ans = ['y', 'Y'];
       if (!ans.includes(answer)) {
         console.log('请您仔细检查修改的文件，确定后可再次提交！');
-        process.exit(0);
+        process.exit(1);
       } else {
         console.log('ok, 自测完毕，您可以继续提交了~');
         process.exit(0);

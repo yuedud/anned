@@ -1,2 +1,15 @@
 /src
 src
+./src
+/public
+public
+./public
+.eslintignore
+.eslintrc.js
+.huskyrc
+checkDiffBeforPush.js
+checkGit.js
+commitlint.config.js
+postcss.config.js
+yarn.lock
+yarn-error.log

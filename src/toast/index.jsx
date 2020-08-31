@@ -5,7 +5,6 @@ import style from './index.less';
 
 class Index extends Component {
   render() {
-    // eslint-disable-next-line react/prop-types
     const { content, position } = this.props;
     return (
       <>
@@ -23,11 +22,11 @@ class Index extends Component {
   }
 }
 
-export const toast = (content, position = 'center', timer = 2000) => {
+export default function toast(content, position = 'center', timer = 2000) {
   const div = document.createElement('div');
   document.body.appendChild(div);
   reactDom.render(<Index content={content} position={position} />, div);
   setTimeout(
     () => document.body.removeChild(div), timer,
   );
-};
+}

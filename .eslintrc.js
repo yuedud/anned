@@ -14,6 +14,7 @@ module.exports = {
     'react/jsx-uses-vars': 2,
     // 关闭禁止prop-types类型
     'react/forbid-prop-types': 0,
+    'react/prop-types': 0,
     // 关闭default-props检查
     'react/require-default-props': 0,
     // 关闭return

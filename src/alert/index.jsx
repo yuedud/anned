@@ -51,13 +51,12 @@ Index.propTypes = {
   type: PropTypes.oneOf(['normal', 'warn', 'error', 'success']),
   timer: PropTypes.number,
 };
-export default Index;
 
-export const alert = (title, type, timer = 3000) => {
+export default function alert(title, type, timer = 3000) {
   const div = document.createElement('div');
   document.body.appendChild(div);
   reactDom.render(<Index title={title} type={type} timer={timer} />, div);
   setTimeout(
     () => document.body.removeChild(div), timer,
   );
-};
+}

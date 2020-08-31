@@ -3,11 +3,36 @@ const HTMLPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OCAWP = require('optimize-css-assets-webpack-plugin');
 
+const devPlugins = [
+  new HTMLPlugin({
+    template: './public/index.html',
+    minify: true,
+  }),
+  new MiniCssExtractPlugin({
+    filename: 'lib/[name]/index.css',
+  }),
+];
+
+const proPlugins = [
+  new MiniCssExtractPlugin({
+    filename: 'lib/[name]/index.css',
+  }),
+  new OCAWP(),
+];
+
 module.exports = {
-  entry: './src/root.jsx',
+  entry: {
+    alert: path.join(__dirname, 'src/alert/index.jsx'),
+    drawer: path.join(__dirname, 'src/drawer/index.jsx'),
+    loading: path.join(__dirname, 'src/loading/index.jsx'),
+    tag: path.join(__dirname, 'src/tag/index.jsx'),
+    toast: path.join(__dirname, 'src/toast/index.jsx'),
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'lib/lib-[hash:5].js',
+    filename: 'lib/[name]/index.js',
+    library: '@lijianqiang01/anned',
+    libraryTarget: 'umd',
   },
   resolve: {
     mainFiles: ['index.jsx', 'index.js'],
@@ -15,7 +40,7 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -79,16 +104,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HTMLPlugin({
-      template: './public/index.html',
-      minify: true,
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/lib-[hash:5].css',
-    }),
-    new OCAWP(),
-  ],
+  plugins: process.env.NODE_ENV === 'development' ? devPlugins : proPlugins,
   devServer: {
     port: 3456,
     open: true,
