@@ -33,6 +33,16 @@ git.diffSummary(['--cached']).then(
       );
       console.error('\x1B[31m%s\x1B[0m', error);
       process.exit(1);
+    } else {
+      console.log(
+        `
+          每次commit修改的行数不能大于400行，请避免积攒大量修改；
+          此次设计到${changes.fileCounts}个文件修改；
+          所有改动的文件：${changes.files.join('，')}；
+          新增${changes.insertions}行，删除${changes.deletions}行;
+          共计改动${codeChange}行；
+        `,
+      );
     }
   },
 );
