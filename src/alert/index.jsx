@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import reactDom from 'react-dom';
 import PropTypes from 'prop-types';
-import style from './index.less';
+import styles from './index.less';
 import { clazz } from '../utils/clazz';
 
 class Index extends Component {
@@ -18,16 +18,17 @@ class Index extends Component {
   }
 
     renderAlertModal = () => {
-      const { type = 'normal', title } = this.props;
+      const { type = 'normal', title, style } = this.props;
       return (
         <div
+          style={style}
           className={
                     clazz([
-                      style.alertBg,
-                      type === 'normal' && style.normal,
-                      type === 'warn' && style.warn,
-                      type === 'error' && style.error,
-                      type === 'success' && style.success,
+                      styles.alertBg,
+                      type === 'normal' && styles.normal,
+                      type === 'warn' && styles.warn,
+                      type === 'error' && styles.error,
+                      type === 'success' && styles.success,
                     ])
                 }
         >
@@ -50,6 +51,7 @@ Index.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['normal', 'warn', 'error', 'success']),
   timer: PropTypes.number,
+  style: PropTypes.object,
 };
 
 export default function alert(title, type, timer = 3000) {

@@ -27,6 +27,7 @@ module.exports = {
     loading: path.join(__dirname, 'src/loading/index.jsx'),
     tag: path.join(__dirname, 'src/tag/index.jsx'),
     toast: path.join(__dirname, 'src/toast/index.jsx'),
+    card: path.join(__dirname, 'src/card/index.jsx'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -60,6 +61,10 @@ module.exports = {
             encoding: false,
           },
         }],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.global\.less$/,
@@ -96,7 +101,7 @@ module.exports = {
           {
             loader: 'style-resources-loader',
             options: {
-              patterns: path.resolve(__dirname, './src/main.global.less'),
+              patterns: path.resolve(__dirname, './src/global.css'),
               injector: 'append',
             },
           },

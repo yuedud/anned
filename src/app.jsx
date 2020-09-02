@@ -3,7 +3,7 @@
  * @description 测试入口
  */
 import React, { Component } from 'react';
-import { toast } from './toast';
+import toast from './toast';
 import Tag from './tag';
 
 toast('4！', 'top');
