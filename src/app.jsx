@@ -18,7 +18,6 @@ class App extends Component {
   handleShowModal() {
     const { isShowModal } = this.state;
     this.setState({
-      // eslint-disable-next-line react/destructuring-assignment
       isShowModal: !isShowModal,
     });
   }

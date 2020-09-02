@@ -9,6 +9,7 @@ git.diffSummary(['--cached']).then(
       insertions: 0,
       deletions: 0,
       fileCounts: 0,
+      files: [],
     };
     diffSummary.files.forEach((item) => {
       const isIgnore = ignoreFilterList.includes(item.file);
@@ -16,6 +17,7 @@ git.diffSummary(['--cached']).then(
         changes.insertions += item.insertions;
         changes.deletions += item.deletions;
         changes.fileCounts += 1;
+        changes.files.push(item.file);
       }
     });
     const codeChange = changes.insertions + changes.deletions;
@@ -24,6 +26,7 @@ git.diffSummary(['--cached']).then(
         `
           每次commit修改的行数不能大于400行，请避免积攒大量修改；
           此次设计到${changes.fileCounts}个文件修改；
+          所有改动的文件：${changes.files.join('，')}；
           新增${changes.insertions}行，删除${changes.deletions}行;
           共计改动${codeChange}行；
         `,
