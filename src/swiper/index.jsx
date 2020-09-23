@@ -9,6 +9,9 @@ class Index extends Component {
         this.swiper = React.createRef();
         this.x = 0;
         this.y = 0;
+        this.state = {
+            index: 0,
+        }
     }
 
     componentDidMount() {
@@ -40,13 +43,23 @@ class Index extends Component {
             if (parseInt(this.swiper.current.children[0].style.marginLeft) ===  -(this.props.imgs.length - 1) * this.props.width){ return }
             this.swiper.current.children[0].style.marginLeft =
                 left - this.props.width + 'px';
+            this.setState(store=>({
+                index: store.index + 1,
+            }))
         }
         if (this.swipe === 1){
             if (parseInt(this.swiper.current.children[0].style.marginLeft) === 0){ return }
             this.swiper.current.children[0].style.marginLeft =
                 parseInt(this.swiper.current.children[0].style.marginLeft) +
                 this.props.width + 'px';
+            this.setState(store=>({
+                index: store.index - 1,
+            }))
         }
+    }
+
+    handleChooseController = (e) => {
+        e.stopPropagation();
     }
 
     render() {
@@ -71,6 +84,21 @@ class Index extends Component {
                                 />
                         ))
                     }
+                    <div
+                        onClick={this.handleChooseController}
+                        onTouchStart={this.handleChooseController}
+                        onTouchMove={this.handleChooseController}
+                        onTouchEnd={this.handleChooseController}
+                        className={style.controller}>
+                        {
+                            [...this.props.imgs].map((item, key)=>(
+                                this.state.index === key ?
+                                <div key={key} className={style.choose}> </div> :
+                                <div key={key} className={style.nochoose}> </div>
+                            ))
+
+                        }
+                    </div>
                 </div>
             </>
         );
