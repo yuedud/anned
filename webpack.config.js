@@ -20,15 +20,17 @@ const proPlugins = [
   new OCAWP(),
 ];
 
+const entryProd = {
+  alert: path.join(__dirname, 'src/alert/index.jsx'),
+  drawer: path.join(__dirname, 'src/drawer/index.jsx'),
+  loading: path.join(__dirname, 'src/loading/index.jsx'),
+  tag: path.join(__dirname, 'src/tag/index.jsx'),
+  toast: path.join(__dirname, 'src/toast/index.jsx'),
+  card: path.join(__dirname, 'src/card/index.jsx'),
+};
+
 module.exports = {
-  entry: {
-    alert: path.join(__dirname, 'src/alert/index.jsx'),
-    drawer: path.join(__dirname, 'src/drawer/index.jsx'),
-    loading: path.join(__dirname, 'src/loading/index.jsx'),
-    tag: path.join(__dirname, 'src/tag/index.jsx'),
-    toast: path.join(__dirname, 'src/toast/index.jsx'),
-    card: path.join(__dirname, 'src/card/index.jsx'),
-  },
+  entry: "./src/root.jsx",
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'lib/[name]/index.js',
@@ -57,7 +59,7 @@ module.exports = {
         use: [{
           loader: 'url-loader',
           options: {
-            limit: 99999,
+            limit: 8 * 1024,
             encoding: false,
           },
         }],
@@ -72,7 +74,6 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/src',
               hmr: true,
             },
           },

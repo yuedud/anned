@@ -1,7 +1,12 @@
 :root{
     --base-color: #5090ff;
 }
-
+li{
+    width: 100%;
+    height: 500px;
+    background: red;
+    margin-top: 50px;
+}
 html,
 body,
 h1,
