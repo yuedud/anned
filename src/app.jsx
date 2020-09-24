@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 import toast from './toast';
 import {LazyLoad} from '@lijianqiang01/annjs';
 import reactDom from "react-dom";
-import Swiper from './swiper';
-
+// import Swiper from './swiper';
+import SwiperLazy from './swiperLazy';
 // toast('4！', 'top');
 class App extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class App extends Component {
 
     return (
       <div>
-          <Swiper width={400} height={400} imgs={imgs} />
+          <SwiperLazy width={400} height={400} imgs={imgs} />
 {/*        <Tag content="tag" type="magenta" background />*/}
 {/*        <Tag content="tag" type="red" background={false} />*/}
 {/*        <Tag content="tag" type="purple" background />*/}

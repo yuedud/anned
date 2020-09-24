@@ -21,7 +21,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-onclickoutside": "^6.9.0",
-    "simple-git": "^2.18.0"
+    "simple-git": "^2.18.0",
+    "swiper": "^6.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
